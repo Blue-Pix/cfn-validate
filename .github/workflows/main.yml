@@ -22,6 +22,13 @@ jobs:
         with:
           stack_name: cfn-validate-basic
           template_body: basic_after.cf.yml
+    
+      - name: archive diff
+        uses: actions/upload-artifact@v1
+        with:
+          name: diff
+          path: ${{ steps.describe-change-set.outputs.diff_file_path }}
+
 
       - name: Post comments
         env:

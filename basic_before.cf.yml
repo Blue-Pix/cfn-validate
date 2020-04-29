@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  queue1:
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: cfn-validate-a
+  queue2:
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: cfn-validate-b
+  queue3:
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: cfn-validate-c
+  queue4:
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: cfn-validate-d

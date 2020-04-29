@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  queue1:
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: cfn-validate-a
+      DelaySeconds: 1
+      VisibilityTimeout: 31
+      MessageRetentionPeriod: 30
+  queue2:
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: cfn-validate-bb
+  queue3:
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: cfn-validate-c
+      Tags:
+        - tag1
+        - tag2
+  queue5:
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: cfn-validate-e

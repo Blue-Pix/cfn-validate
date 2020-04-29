@@ -29,6 +29,10 @@ jobs:
           name: diff
           path: ${{ steps.describe-change-set.outputs.diff_file_path }}
 
+      - name: Download diff markdown
+        uses: actions/download-artifact@v1
+        with:
+          name: diff
 
       - name: Post comments
         env:

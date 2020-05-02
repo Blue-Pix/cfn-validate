@@ -1,1 +1,2 @@
 # cfn-validate
+test

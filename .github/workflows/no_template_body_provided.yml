@@ -16,7 +16,7 @@ jobs:
           aws-region: ap-northeast-1
       - name: describe change set
         id: describe-change-set
-        uses: Blue-Pix/describe-cfn-change-set@wip/v2.1
+        uses: Blue-Pix/describe-cfn-change-set@v2.1
         with:
           stack_name: cfn-validate-basic
       - name: echo output
